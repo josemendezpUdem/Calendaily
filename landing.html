@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<!--..............................................................................-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+
+	<meta name="author" content="Lopez, Mendez, Monjaras">
+	<meta name="description" content="Administrador de horarios entre amigos, conocidos y compañeros">	
+	<meta name=viewport content="width=device-width, user-scalable=no, inital-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+</head>
+
+<!--..............................................................................-->
+<body class="setLightMode">
+	<br>
+	<br>
+
+	<div class="container">
+
+	<div class="row float-right">
+		<div class="col-2">
+      		<a href="SignUp.html"><button type="button" class="btn btn-warning btn-lg">Sign Up</button></a>
+    	</div>
+	</div>
+	<br>
+	<br>
+	<br>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-lg-6">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12">
+					<p class="displayLandingWelcome">Calendaily is where friends are reunited</p>
+				</div>
+			</div>
+
+			<form>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<div class="form-group addPaddingRight">
+						    <label for="email_field">Email</label>
+						    <input type="text" class="form-control" id="email_field" placeholder="Email">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<div class="form-group addPaddingRight">
+						    <label for="password_field">Password</label>
+						    <input type="password" class="form-control" id="password_field" placeholder="Password">
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<section class="row">
+				<div class="text-center col-xs-12 col-sm-12">
+					<button onClick="login()" type="button" class="btn btn-primary btn-lg">Login</button>
+				</div>
+			</section>
+		</div>
+
+		<div class="col-xs-12 col-sm-12 col-lg-6">
+			<img src="./images/friends.png">
+		</div>
+		
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script>
+	</script>
+	<script src="Scripts/index.js"></script>
+</body>
+<!--..............................................................................-->
+</html>

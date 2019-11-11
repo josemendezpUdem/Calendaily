@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!--..............................................................................-->
+
+<head>
+	<meta charset="utf-8">
+	<title>SignUp</title>
+
+	<meta name="author" content="Lopez, Mendez, Monjaras">
+	<meta name="description" content="Administrador de horarios entre amigos, conocidos y compañeros">	
+	<meta name=viewport content="width=device-width, user-scalable=no, inital-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+</head>
+
+<!--..............................................................................-->
+<body class="setLightMode">
+	<br>
+
+	<div class="container">
+
+		<h1 class="display-1 text-center">Calendaily</h1>
+		<h3 class="display-4 text-center">Get Started</h3>
+
+		<form>
+			<div class="row justify-content-center">
+				<div class="form-group col-4">
+				    <label for="email_field_su">Email</label>
+				    <input type="text" class="form-control" id="email_field_su" placeholder="Email">
+				    <small class="form-text text-muted">Choose wisely</small>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="form-group col-4">
+				    <label for="password_field_su">Password</label>
+				    <input type="password" class="form-control" id="password_field_su" placeholder="Password">
+				    <small class="form-text text-muted">Choose extra wisely</small>
+				</div>
+			</div>
+		</form>
+
+		<small class="form-text text-muted text-center">What are you waiting for?</small>
+		<section class="row">
+			<div class="text-center col-md-12">
+				<button onClick="signup()" type="button" class="btn btn-warning btn-lg">Sign Up</button>
+			</div>
+		</section>
+		<br>
+
+		<h5 class="display-4 text-center">Already have an account?</h5>
+		<h3><a href="login.html"><small class="form-text text-muted text-center setTextBlack">Login</small></a></h3>
+		<br>
+
+
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script>
+	</script>
+	<script src="Scripts/index.js"></script>
+</body>
+<!--..............................................................................-->
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Calendaily</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="Styles/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Courgette|Dancing+Script|Great+Vibes|Lobster+Two|Open+Sans|Pinyon+Script|Satisfy" rel="stylesheet">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150678565-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-150678565-1');
+	</script>
+	
+	<meta charset="utf-8">
+	<title>Schedule</title>
+
+	<meta name="author" content="Lopez, Mendez, Monjaras">
+	<meta name="description" content="Administrador de horarios entre amigos, conocidos y compañeros">	
+	<meta name=viewport content="width=device-width, user-scalable=no, inital-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+</head>
+
+	<body class="setLightMode" onload="loadIndex()">
+
+	<div class="container">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-11 col-xs-10">
+					<a href="index.html"><h3>Calendaily</h3></a>	
+			</div>
+			<div class=".col-auto">
+				<button onclick="logout()" class="btn btn-dark">Log out</button>
+			</div>
+		</div>
+		<br>
+		<br>
+
+		<div class="row">
+			<div class="col-sm-2 col-xs-2">
+				<a href="addFriends.html"><button type="button" class="btn btn-warning btn-lg">Add Friends</button></a>
+			</div>
+			<div class="col-sm-8 col-xs-7">
+			</div>
+			<div class=".col-auto">
+				<a href="modifySchedule.html"><button type="button" class="btn btn-warning btn-lg">Modify schedule</button></a>
+			</div>
+		</div>
+		<br>
+
+		<table class="table text-center">
+		    <thead class="thead-dark">
+		    	<tr>
+			      	<th scope="col" style="width: 5%"></th>
+			      	<th scope="col" style="width: 19%">Monday</th>
+			      	<th scope="col" style="width: 19%">Tuesday</th>
+			      	<th scope="col" style="width: 19%">Wednesday</th>
+			      	<th scope="col" style="width: 19%">Thursday</th>
+			      	<th scope="col" style="width: 19%">Friday</th>
+		    	</tr>
+		  	</thead>
+			<tbody>
+				<tr>
+			      	<th scope="row">07:30</th>
+			      	<td id="00"></td>
+			      	<td id="10"></td>
+			      	<td id="20"></td>
+			      	<td id="30"></td>
+			      	<td id="40"></td>
+			    </tr>
+			    <!---->
+			    <tr>
+			      	<th scope="row">08:30</th>
+			     	<td id="01"></td>
+			      	<td id="11"></td>
+			      	<td id="21"></td>
+			      	<td id="31"></td>
+			      	<td id="41"></td>
+			    </tr>
+			    <!---->
+			    <tr>
+			      	<th scope="row">10:00</th>
+			      	<td id="02"></td>
+			      	<td id="12"></td>
+			      	<td id="22"></td>
+			      	<td id="32"></td>
+			      	<td id="42"></td>
+			    </tr>
+			    <!---->
+			    <tr>
+			      	<th scope="row">11:30</th>
+			      	<td id="03"></td>
+			      	<td id="13"></td>
+			      	<td id="23"></td>
+			      	<td id="33"></td>
+			      	<td id="43"></td>
+			    </tr>
+			    <!---->
+			    <tr>
+			      	<th scope="row">01:00</th>
+			      	<td id="04"></td>
+			      	<td id="14"></td>
+			      	<td id="24"></td>
+			      	<td id="34"></td>
+			      	<td id="44"></td>
+			    </tr>
+			    <!---->
+			    <tr>
+			      	<th scope="row">02:30</th>
+			      	<td id="05"></td>
+			      	<td id="15"></td>
+			      	<td id="25"></td>
+			      	<td id="35"></td>
+			      	<td id="45"></td>
+			    </tr>
+			    <!---->
+			    <tr>
+			      	<th scope="row">04:00</th>
+			      	<td id="06"></td>
+			      	<td id="16"></td>
+			      	<td id="26"></td>
+			      	<td id="36"></td>
+			      	<td id="46"></td>
+			    </tr>
+			    <tr>
+			      	<th scope="row">05:30</th>
+			      	<td id="07"></td>
+			      	<td id="17"></td>
+			      	<td id="27"></td>
+			      	<td id="37"></td>
+			      	<td id="47"></td>
+			    </tr>
+			    <tr>
+			      	<th scope="row">07:00</th>
+			      	<td id="08"></td>
+			      	<td id="18"></td>
+			      	<td id="28"></td>
+			      	<td id="38"></td>
+			      	<td id="48"></td>
+			    </tr>
+			    <tr>
+			      	<th scope="row">08:30</th>
+			      	<td id="09"></td>
+			      	<td id="19"></td>
+			      	<td id="29"></td>
+			      	<td id="39"></td>
+			      	<td id="49"></td>
+			    </tr>
+			    <tr>
+			      	<th scope="row">10:00</th>
+			      	<td id="010"></td>
+			      	<td id="110"></td>
+			      	<td id="210"></td>
+			      	<td id="310"></td>
+			      	<td id="410"></td>
+			    </tr>
+			</tbody>
+		</table>
+	</div>
+	
+	</body>
+
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script src="Scripts/index.js"></script>
+</html>

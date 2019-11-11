@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Manage Friends</title>
+
+	<link rel="stylesheet" href="Styles/style.css">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150678565-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-150678565-1');
+	</script>
+
+	<meta charset="utf-8">
+
+	<meta name="author" content="Lopez, Mendez, Monjaras">
+	<meta name="description" content="Administrador de horarios entre amigos, conocidos y compañeros">
+	<meta name=viewport content="width=device-width, user-scalable=no, inital-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+</head>
+
+	<body class="setLightMode">
+		<div class="container">
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-sm-10 col-xs-10">
+						<a href="index.html"><h3>Calendaily</h3></a>
+				</div>
+				<div class="col-sm-2 col-xs-2 float-right">
+					<button onclick="logout()" class="btn btn-primary">Logout</button>
+				</div>
+			</div>
+			<br>
+			<br>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12">
+					<p class="display-4">Click on each period to change its status.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-10 col-xs-10">
+				</div>
+				<div class=".col-auto">
+					<button type="button" class="btn btn-warning btn-lg" onclick="sumbitChanges()">Sumbit changes</button></a>
+				</div>
+			</div>
+			<br>
+			<table class="table text-center">
+			    <thead class="thead-dark">
+			    	<tr>
+				      	<th scope="col" style="width: 5%"></th>
+				      	<th scope="col" style="width: 19%">Monday</th>
+				      	<th scope="col" style="width: 19%">Tuesday</th>
+				      	<th scope="col" style="width: 19%">Wednesday</th>
+				      	<th scope="col" style="width: 19%">Thursday</th>
+				      	<th scope="col" style="width: 19%">Friday</th>
+			    	</tr>
+			  	</thead>
+				<tbody>
+					<tr>
+				      	<th scope="row">07:00</th>
+				      	<td id="espacioLun700" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun700" onclick="lun700()">Available</button></td>
+				      	<td id="espacioMar700" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar700" onclick="Mar700()">Available</button></td>
+				      	<td id="espacioMie700" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie700" onclick="Mie700()">Available</button></td>
+				      	<td id="espacioJue700" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue700" onclick="Jue700()">Available</button></td>
+				      	<td id="espacioVie700" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie700" onclick="Vie700()">Available</button></td>
+				    </tr>
+				    <!---->
+				    <tr>
+				      	<th scope="row">08:30</th>
+				      	<td id="espacioLun830" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun830" onclick="lun830()">Available</button></td>
+				      	<td id="espacioMar830" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar830" onclick="Mar830()">Available</button></td>
+				      	<td id="espacioMie830" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie830" onclick="Mie830()">Available</button></td>
+				      	<td id="espacioJue830" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue830" onclick="Jue830()">Available</button></td>
+				      	<td id="espacioVie830" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie830" onclick="Vie830()">Available</button></td>
+				    </tr>
+				    <!---->
+				    <tr>
+				      	<th scope="row">10:00</th>
+				      	<td id="espacioLun1000" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun1000" onclick="lun1000()">Available</button></td>
+				      	<td id="espacioMar1000" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar1000" onclick="Mar1000()">Available</button></td>
+				      	<td id="espacioMie1000" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie1000" onclick="Mie1000()">Available</button></td>
+				      	<td id="espacioJue1000" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue1000" onclick="Jue1000()">Available</button></td>
+				      	<td id="espacioVie1000" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie1000" onclick="Vie1000()">Available</button></td>
+				    </tr>
+				    <!---->
+				    <tr>
+				      	<th scope="row">11:30</th>
+				      	<td id="espacioLun1130" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun1130" onclick="lun1130()">Available</button></td>
+				      	<td id="espacioMar1130" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar1130" onclick="Mar1130()">Available</button></td>
+				      	<td id="espacioMie1130" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie1130" onclick="Mie1130()">Available</button></td>
+				      	<td id="espacioJue1130" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue1130" onclick="Jue1130()">Available</button></td>
+				      	<td id="espacioVie1130" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie1130" onclick="Vie1130()">Available</button></td>
+				    </tr>
+				    <!---->
+				    <tr>
+				      	<th scope="row">01:00</th>
+				      	<td id="espacioLun1300" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun1300" onclick="lun1300()">Available</button></td>
+				      	<td id="espacioMar1300" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar1300" onclick="Mar1300()">Available</button></td>
+				      	<td id="espacioMie1300" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie1300" onclick="Mie1300()">Available</button></td>
+				      	<td id="espacioJue1300" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue1300" onclick="Jue1300()">Available</button></td>
+				      	<td id="espacioVie1300" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie1300" onclick="Vie1300()">Available</button></td>
+				    </tr>
+				    <!---->
+				    <tr>
+				      	<th scope="row">02:30</th>
+				      	<td id="espacioLun1430" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun1430" onclick="lun1430()">Available</button></td>
+				      	<td id="espacioMar1430" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar1430" onclick="Mar1430()">Available</button></td>
+				      	<td id="espacioMie1430" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie1430" onclick="Mie1430()">Available</button></td>
+				      	<td id="espacioJue1430" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue1430" onclick="Jue1430()">Available</button></td>
+				      	<td id="espacioVie1430" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie1430" onclick="Vie1430()">Available</button></td>
+				    </tr>
+				    <!---->
+				    <tr>
+				      	<th scope="row">04:00</th>
+				      	<td id="espacioLun1600" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun1600" onclick="lun1600()">Available</button></td>
+				      	<td id="espacioMar1600" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar1600" onclick="Mar1600()">Available</button></td>
+				      	<td id="espacioMie1600" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie1600" onclick="Mie1600()">Available</button></td>
+				      	<td id="espacioJue1600" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue1600" onclick="Jue1600()">Available</button></td>
+				      	<td id="espacioVie1600" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie1600" onclick="Vie1600()">Available</button></td>
+				    </tr>
+				    <tr>
+				      	<th scope="row">05:30</th>
+				      	<td id="espacioLun1730" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun1730" onclick="lun1730()">Available</button></td>
+				      	<td id="espacioMar1730" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar1730" onclick="Mar1730()">Available</button></td>
+				      	<td id="espacioMie1730" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie1730" onclick="Mie1730()">Available</button></td>
+				      	<td id="espacioJue1730" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue1730" onclick="Jue1730()">Available</button></td>
+				      	<td id="espacioVie1730" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie1730" onclick="Vie1730()">Available</button></td>
+				    </tr>
+				    <tr>
+				      	<th scope="row">07:00</th>
+				      	<td id="espacioLun1900" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun1900" onclick="lun1900()">Available</button></td>
+				      	<td id="espacioMar1900" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar1900" onclick="Mar1900()">Available</button></td>
+				      	<td id="espacioMie1900" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie1900" onclick="Mie1900()">Available</button></td>
+				      	<td id="espacioJue1900" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue1900" onclick="Jue1900()">Available</button></td>
+				      	<td id="espacioVie1900" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie1900" onclick="Vie1900()">Available</button></td>
+				    </tr>
+				    <tr>
+				      	<th scope="row">08:30</th>
+				      	<td id="espacioLun2030" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun2030" onclick="lun2030()">Available</button></td>
+				      	<td id="espacioMar2030" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar2030" onclick="Mar2030()">Available</button></td>
+				      	<td id="espacioMie2030" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie2030" onclick="Mie2030()">Available</button></td>
+				      	<td id="espacioJue2030" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue2030" onclick="Jue2030()">Available</button></td>
+				      	<td id="espacioVie2030" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie2030" onclick="Vie2030()">Available</button></td>
+				    </tr>
+				    <tr>
+				      	<th scope="row">10:00</th>
+				      	<td id="espacioLun2200" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="lun2200" onclick="lun2200()">Available</button></td>
+				      	<td id="espacioMar2200" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mar2200" onclick="Mar2200()">Available</button></td>
+				      	<td id="espacioMie2200" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Mie2200" onclick="Mie2200()">Available</button></td>
+				      	<td id="espacioJue2200" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Jue2200" onclick="Jue2200()">Available</button></td>
+				      	<td id="espacioVie2200" class="setFondoGris"><button class="btn btn-outline-secondary btn-lg" id="Vie2200" onclick="Vie2200()">Available</button></td>
+				    </tr>
+				</tbody>
+			</table>
+			<div class="row">
+				<div class="col-sm-10 col-xs-10">
+				</div>
+				<div class=".col-auto">
+					<button type="button" class="btn btn-warning btn-lg" onclick="sumbitChanges()">Sumbit changes</button></a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		var arregloDisponibilidad = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+									 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+									 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+									 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+									 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+									];
+
+		function sumbitChanges()
+		{
+			//console.log(arregloDisponibilidad);
+			updateMaterias(arregloDisponibilidad)
+		}
+
+		//730-------------------------------------------------------------------------------
+
+		function lun700(){
+			if (arregloDisponibilidad[0][0] === 1){
+				arregloDisponibilidad[0][0] = 0;
+				document.getElementById('lun700').innerHTML = "Available";
+				document.getElementById("espacioLun700").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun700").classList.remove('setFondoGris');
+				document.getElementById("espacioLun700").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][0] = 1;
+				document.getElementById('lun700').innerHTML = "Busy";
+				document.getElementById("espacioLun700").classList.remove('setFondoGris');
+				document.getElementById("espacioLun700").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar700(){
+			if (arregloDisponibilidad[1][0] === 1){
+				arregloDisponibilidad[1][0] = 0;
+				document.getElementById('Mar700').innerHTML = "Available";
+				document.getElementById("espacioMar700").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar700").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar700").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][0] = 1;
+				document.getElementById('Mar700').innerHTML = "Busy";
+				document.getElementById("espacioMar700").classList.remove('setFondoGris');
+				document.getElementById("espacioMar700").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie700(){
+			if (arregloDisponibilidad[2][0] === 1){
+				arregloDisponibilidad[2][0] = 0;
+				document.getElementById('Mie700').innerHTML = "Available";
+				document.getElementById("espacioMie700").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie700").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie700").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][0] = 1;
+				document.getElementById('Mie700').innerHTML = "Busy";
+				document.getElementById("espacioMie700").classList.remove('setFondoGris');
+				document.getElementById("espacioMie700").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue700(){
+			if (arregloDisponibilidad[3][0] === 1){
+				arregloDisponibilidad[3][0] = 0;
+				document.getElementById('Jue700').innerHTML = "Available";
+				document.getElementById("espacioJue700").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue700").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue700").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][0] = 1;
+				document.getElementById('Jue700').innerHTML = "Busy";
+				document.getElementById("espacioJue700").classList.remove('setFondoGris');
+				document.getElementById("espacioJue700").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie700(){
+			if (arregloDisponibilidad[4][0] === 1){
+				arregloDisponibilidad[4][0] = 0;
+				document.getElementById('Vie700').innerHTML = "Available";
+				document.getElementById("espacioVie700").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie700").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie700").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][0] = 1;
+				document.getElementById('Vie700').innerHTML = "Busy";
+				document.getElementById("espacioVie700").classList.remove('setFondoGris');
+				document.getElementById("espacioVie700").classList.add('setFondoRojo');
+			}
+		}
+
+		//830-------------------------------------------------------------------------------
+
+
+		function lun830(){
+			if (arregloDisponibilidad[0][1] === 1){
+				arregloDisponibilidad[0][1] = 0;
+				document.getElementById('lun830').innerHTML = "Available";
+				document.getElementById("espacioLun830").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun830").classList.remove('setFondoGris');
+				document.getElementById("espacioLun830").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][1] = 1;
+				document.getElementById('lun830').innerHTML = "Busy";
+				document.getElementById("espacioLun830").classList.remove('setFondoGris');
+				document.getElementById("espacioLun830").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar830(){
+			if (arregloDisponibilidad[1][1] === 1){
+				arregloDisponibilidad[1][1] = 0;
+				document.getElementById('Mar830').innerHTML = "Available";
+				document.getElementById("espacioMar830").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar830").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar830").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][1] = 1;
+				document.getElementById('Mar830').innerHTML = "Busy";
+				document.getElementById("espacioMar830").classList.remove('setFondoGris');
+				document.getElementById("espacioMar830").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie830(){
+			if (arregloDisponibilidad[2][1] === 1){
+				arregloDisponibilidad[2][1] = 0;
+				document.getElementById('Mie830').innerHTML = "Available";
+				document.getElementById("espacioMie830").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie830").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie830").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][1] = 1;
+				document.getElementById('Mie830').innerHTML = "Busy";
+				document.getElementById("espacioMie830").classList.remove('setFondoGris');
+				document.getElementById("espacioMie830").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue830(){
+			if (arregloDisponibilidad[3][1] === 1){
+				arregloDisponibilidad[3][1] = 0;
+				document.getElementById('Jue830').innerHTML = "Available";
+				document.getElementById("espacioJue830").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue830").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue830").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][1] = 1;
+				document.getElementById('Jue830').innerHTML = "Busy";
+				document.getElementById("espacioJue830").classList.remove('setFondoGris');
+				document.getElementById("espacioJue830").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie830(){
+			if (arregloDisponibilidad[4][1] === 1){
+				arregloDisponibilidad[4][1] = 0;
+				document.getElementById('Vie830').innerHTML = "Available";
+				document.getElementById("espacioVie830").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie830").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie830").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][1] = 1;
+				document.getElementById('Vie830').innerHTML = "Busy";
+				document.getElementById("espacioVie830").classList.remove('setFondoGris');
+				document.getElementById("espacioVie830").classList.add('setFondoRojo');
+			}
+		}
+
+
+		//1000-------------------------------------------------------------------------------
+
+
+		function lun1000(){
+			if (arregloDisponibilidad[0][2] === 1){
+				arregloDisponibilidad[0][2] = 0;
+				document.getElementById('lun1000').innerHTML = "Available";
+				document.getElementById("espacioLun1000").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun1000").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1000").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][2] = 1;
+				document.getElementById('lun1000').innerHTML = "Busy";
+				document.getElementById("espacioLun1000").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1000").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar1000(){
+			if (arregloDisponibilidad[1][2] === 1){
+				arregloDisponibilidad[1][2] = 0;
+				document.getElementById('Mar1000').innerHTML = "Available";
+				document.getElementById("espacioMar1000").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar1000").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar1000").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][2] = 1;
+				document.getElementById('Mar1000').innerHTML = "Busy";
+				document.getElementById("espacioMar1000").classList.remove('setFondoGris');
+				document.getElementById("espacioMar1000").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie1000(){
+			if (arregloDisponibilidad[2][2] === 1){
+				arregloDisponibilidad[2][2] = 0;
+				document.getElementById('Mie1000').innerHTML = "Available";
+				document.getElementById("espacioMie1000").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie1000").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie1000").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][2] = 1;
+				document.getElementById('Mie1000').innerHTML = "Busy";
+				document.getElementById("espacioMie1000").classList.remove('setFondoGris');
+				document.getElementById("espacioMie1000").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue1000(){
+			if (arregloDisponibilidad[3][2] === 1){
+				arregloDisponibilidad[3][2] = 0;
+				document.getElementById('Jue1000').innerHTML = "Available";
+				document.getElementById("espacioJue1000").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue1000").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue1000").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][2] = 1;
+				document.getElementById('Jue1000').innerHTML = "Busy";
+				document.getElementById("espacioJue1000").classList.remove('setFondoGris');
+				document.getElementById("espacioJue1000").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie1000(){
+			if (arregloDisponibilidad[4][2] === 1){
+				arregloDisponibilidad[4][2] = 0;
+				document.getElementById('Vie1000').innerHTML = "Available";
+				document.getElementById("espacioVie1000").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie1000").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie1000").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][2] = 1;
+				document.getElementById('Vie1000').innerHTML = "Busy";
+				document.getElementById("espacioVie1000").classList.remove('setFondoGris');
+				document.getElementById("espacioVie1000").classList.add('setFondoRojo');
+			}
+		}
+
+
+		//1130-------------------------------------------------------------------------------
+
+
+		function lun1130(){
+			if (arregloDisponibilidad[0][3] === 1){
+				arregloDisponibilidad[0][3] = 0;
+				document.getElementById('lun1130').innerHTML = "Available";
+				document.getElementById("espacioLun1130").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun1130").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1130").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][3] = 1;
+				document.getElementById('lun1130').innerHTML = "Busy";
+				document.getElementById("espacioLun1130").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1130").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar1130(){
+			if (arregloDisponibilidad[1][3] === 1){
+				arregloDisponibilidad[1][3] = 0;
+				document.getElementById('Mar1130').innerHTML = "Available";
+				document.getElementById("espacioMar1130").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar1130").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar1130").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][3] = 1;
+				document.getElementById('Mar1130').innerHTML = "Busy";
+				document.getElementById("espacioMar1130").classList.remove('setFondoGris');
+				document.getElementById("espacioMar1130").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie1130(){
+			if (arregloDisponibilidad[2][3] === 1){
+				arregloDisponibilidad[2][3] = 0;
+				document.getElementById('Mie1130').innerHTML = "Available";
+				document.getElementById("espacioMie1130").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie1130").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie1130").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][3] = 1;
+				document.getElementById('Mie1130').innerHTML = "Busy";
+				document.getElementById("espacioMie1130").classList.remove('setFondoGris');
+				document.getElementById("espacioMie1130").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue1130(){
+			if (arregloDisponibilidad[3][3] === 1){
+				arregloDisponibilidad[3][3] = 0;
+				document.getElementById('Jue1130').innerHTML = "Available";
+				document.getElementById("espacioJue1130").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue1130").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue1130").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][3] = 1;
+				document.getElementById('Jue1130').innerHTML = "Busy";
+				document.getElementById("espacioJue1130").classList.remove('setFondoGris');
+				document.getElementById("espacioJue1130").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie1130(){
+			if (arregloDisponibilidad[4][3] === 1){
+				arregloDisponibilidad[4][3] = 0;
+				document.getElementById('Vie1130').innerHTML = "Available";
+				document.getElementById("espacioVie1130").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie1130").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie1130").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][3] = 1;
+				document.getElementById('Vie1130').innerHTML = "Busy";
+				document.getElementById("espacioVie1130").classList.remove('setFondoGris');
+				document.getElementById("espacioVie1130").classList.add('setFondoRojo');
+			}
+		}
+
+		//100-------------------------------------------------------------------------------
+
+
+		function lun1300(){
+			if (arregloDisponibilidad[0][4] === 1){
+				arregloDisponibilidad[0][4] = 0;
+				document.getElementById('lun1300').innerHTML = "Available";
+				document.getElementById("espacioLun1300").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun1300").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1300").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][4] = 1;
+				document.getElementById('lun1300').innerHTML = "Busy";
+				document.getElementById("espacioLun1300").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1300").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar1300(){
+			if (arregloDisponibilidad[1][4] === 1){
+				arregloDisponibilidad[1][4] = 0;
+				document.getElementById('Mar1300').innerHTML = "Available";
+				document.getElementById("espacioMar1300").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar1300").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar1300").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][4] = 1;
+				document.getElementById('Mar1300').innerHTML = "Busy";
+				document.getElementById("espacioMar1300").classList.remove('setFondoGris');
+				document.getElementById("espacioMar1300").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie1300(){
+			if (arregloDisponibilidad[2][4] === 1){
+				arregloDisponibilidad[2][4] = 0;
+				document.getElementById('Mie1300').innerHTML = "Available";
+				document.getElementById("espacioMie1300").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie1300").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie1300").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][4] = 1;
+				document.getElementById('Mie1300').innerHTML = "Busy";
+				document.getElementById("espacioMie1300").classList.remove('setFondoGris');
+				document.getElementById("espacioMie1300").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue1300(){
+			if (arregloDisponibilidad[3][4] === 1){
+				arregloDisponibilidad[3][4] = 0;
+				document.getElementById('Jue1300').innerHTML = "Available";
+				document.getElementById("espacioJue1300").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue1300").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue1300").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][4] = 1;
+				document.getElementById('Jue1300').innerHTML = "Busy";
+				document.getElementById("espacioJue1300").classList.remove('setFondoGris');
+				document.getElementById("espacioJue1300").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie1300(){
+			if (arregloDisponibilidad[4][4] === 1){
+				arregloDisponibilidad[4][4] = 0;
+				document.getElementById('Vie1300').innerHTML = "Available";
+				document.getElementById("espacioVie1300").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie1300").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie1300").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][4] = 1;
+				document.getElementById('Vie1300').innerHTML = "Busy";
+				document.getElementById("espacioVie1300").classList.remove('setFondoGris');
+				document.getElementById("espacioVie1300").classList.add('setFondoRojo');
+			}
+		}
+
+		//230-------------------------------------------------------------------------------
+
+		function lun1430(){
+			if (arregloDisponibilidad[0][5] === 1){
+				arregloDisponibilidad[0][5] = 0;
+				document.getElementById('lun1430').innerHTML = "Available";
+				document.getElementById("espacioLun1430").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun1430").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1430").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][5] = 1;
+				document.getElementById('lun1430').innerHTML = "Busy";
+				document.getElementById("espacioLun1430").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1430").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar1430(){
+			if (arregloDisponibilidad[1][5] === 1){
+				arregloDisponibilidad[1][5] = 0;
+				document.getElementById('Mar1430').innerHTML = "Available";
+				document.getElementById("espacioMar1430").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar1430").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar1430").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][5] = 1;
+				document.getElementById('Mar1430').innerHTML = "Busy";
+				document.getElementById("espacioMar1430").classList.remove('setFondoGris');
+				document.getElementById("espacioMar1430").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie1430(){
+			if (arregloDisponibilidad[2][5] === 1){
+				arregloDisponibilidad[2][5] = 0;
+				document.getElementById('Mie1430').innerHTML = "Available";
+				document.getElementById("espacioMie1430").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie1430").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie1430").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][5] = 1;
+				document.getElementById('Mie1430').innerHTML = "Busy";
+				document.getElementById("espacioMie1430").classList.remove('setFondoGris');
+				document.getElementById("espacioMie1430").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue1430(){
+			if (arregloDisponibilidad[3][5] === 1){
+				arregloDisponibilidad[3][5] = 0;
+				document.getElementById('Jue1430').innerHTML = "Available";
+				document.getElementById("espacioJue1430").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue1430").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue1430").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][5] = 1;
+				document.getElementById('Jue1430').innerHTML = "Busy";
+				document.getElementById("espacioJue1430").classList.remove('setFondoGris');
+				document.getElementById("espacioJue1430").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie1430(){
+			if (arregloDisponibilidad[4][5] === 1){
+				arregloDisponibilidad[4][5] = 0;
+				document.getElementById('Vie1430').innerHTML = "Available";
+				document.getElementById("espacioVie1430").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie1430").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie1430").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][5] = 1;
+				document.getElementById('Vie1430').innerHTML = "Busy";
+				document.getElementById("espacioVie1430").classList.remove('setFondoGris');
+				document.getElementById("espacioVie1430").classList.add('setFondoRojo');
+			}
+		}
+
+		//400-------------------------------------------------------------------------------
+
+		function lun1600(){
+			if (arregloDisponibilidad[0][6] === 1){
+				arregloDisponibilidad[0][6] = 0;
+				document.getElementById('lun1600').innerHTML = "Available";
+				document.getElementById("espacioLun1600").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun1600").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1600").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][6] = 1;
+				document.getElementById('lun1600').innerHTML = "Busy";
+				document.getElementById("espacioLun1600").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1600").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar1600(){
+			if (arregloDisponibilidad[1][6] === 1){
+				arregloDisponibilidad[1][6] = 0;
+				document.getElementById('Mar1600').innerHTML = "Available";
+				document.getElementById("espacioMar1600").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar1600").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar1600").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][6] = 1;
+				document.getElementById('Mar1600').innerHTML = "Busy";
+				document.getElementById("espacioMar1600").classList.remove('setFondoGris');
+				document.getElementById("espacioMar1600").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie1600(){
+			if (arregloDisponibilidad[2][6] === 1){
+				arregloDisponibilidad[2][6] = 0;
+				document.getElementById('Mie1600').innerHTML = "Available";
+				document.getElementById("espacioMie1600").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie1600").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie1600").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][6] = 1;
+				document.getElementById('Mie1600').innerHTML = "Busy";
+				document.getElementById("espacioMie1600").classList.remove('setFondoGris');
+				document.getElementById("espacioMie1600").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue1600(){
+			if (arregloDisponibilidad[3][6] === 1){
+				arregloDisponibilidad[3][6] = 0;
+				document.getElementById('Jue1600').innerHTML = "Available";
+				document.getElementById("espacioJue1600").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue1600").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue1600").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][6] = 1;
+				document.getElementById('Jue1600').innerHTML = "Busy";
+				document.getElementById("espacioJue1600").classList.remove('setFondoGris');
+				document.getElementById("espacioJue1600").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie1600(){
+			if (arregloDisponibilidad[4][6] === 1){
+				arregloDisponibilidad[4][6] = 0;
+				document.getElementById('Vie1600').innerHTML = "Available";
+				document.getElementById("espacioVie1600").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie1600").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie1600").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][6] = 1;
+				document.getElementById('Vie1600').innerHTML = "Busy";
+				document.getElementById("espacioVie1600").classList.remove('setFondoGris');
+				document.getElementById("espacioVie1600").classList.add('setFondoRojo');
+			}
+		}
+
+		//530-------------------------------------------------------------------------------
+
+		function lun1730(){
+			if (arregloDisponibilidad[0][7] === 1){
+				arregloDisponibilidad[0][7] = 0;
+				document.getElementById('lun1730').innerHTML = "Available";
+				document.getElementById("espacioLun1730").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun1730").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1730").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][7] = 1;
+				document.getElementById('lun1730').innerHTML = "Busy";
+				document.getElementById("espacioLun1730").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1730").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar1730(){
+			if (arregloDisponibilidad[1][7] === 1){
+				arregloDisponibilidad[1][7] = 0;
+				document.getElementById('Mar1730').innerHTML = "Available";
+				document.getElementById("espacioMar1730").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar1730").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar1730").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][7] = 1;
+				document.getElementById('Mar1730').innerHTML = "Busy";
+				document.getElementById("espacioMar1730").classList.remove('setFondoGris');
+				document.getElementById("espacioMar1730").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie1730(){
+			if (arregloDisponibilidad[2][7] === 1){
+				arregloDisponibilidad[2][7] = 0;
+				document.getElementById('Mie1730').innerHTML = "Available";
+				document.getElementById("espacioMie1730").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie1730").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie1730").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][7] = 1;
+				document.getElementById('Mie1730').innerHTML = "Busy";
+				document.getElementById("espacioMie1730").classList.remove('setFondoGris');
+				document.getElementById("espacioMie1730").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue1730(){
+			if (arregloDisponibilidad[3][7] === 1){
+				arregloDisponibilidad[3][7] = 0;
+				document.getElementById('Jue1730').innerHTML = "Available";
+				document.getElementById("espacioJue1730").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue1730").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue1730").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][7] = 1;
+				document.getElementById('Jue1730').innerHTML = "Busy";
+				document.getElementById("espacioJue1730").classList.remove('setFondoGris');
+				document.getElementById("espacioJue1730").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie1730(){
+			if (arregloDisponibilidad[4][7] === 1){
+				arregloDisponibilidad[4][7] = 0;
+				document.getElementById('Vie1730').innerHTML = "Available";
+				document.getElementById("espacioVie1730").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie1730").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie1730").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][7] = 1;
+				document.getElementById('Vie1730').innerHTML = "Busy";
+				document.getElementById("espacioVie1730").classList.remove('setFondoGris');
+				document.getElementById("espacioVie1730").classList.add('setFondoRojo');
+			}
+		}
+
+		//700-------------------------------------------------------------------------------
+
+
+		function lun1900(){
+			if (arregloDisponibilidad[0][8] === 1){
+				arregloDisponibilidad[0][8] = 0;
+				document.getElementById('lun1900').innerHTML = "Available";
+				document.getElementById("espacioLun1900").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun1900").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1900").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][8] = 1;
+				document.getElementById('lun1900').innerHTML = "Busy";
+				document.getElementById("espacioLun1900").classList.remove('setFondoGris');
+				document.getElementById("espacioLun1900").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar1900(){
+			if (arregloDisponibilidad[1][8] === 1){
+				arregloDisponibilidad[1][8] = 0;
+				document.getElementById('Mar1900').innerHTML = "Available";
+				document.getElementById("espacioMar1900").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar1900").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar1900").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][8] = 1;
+				document.getElementById('Mar1900').innerHTML = "Busy";
+				document.getElementById("espacioMar1900").classList.remove('setFondoGris');
+				document.getElementById("espacioMar1900").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie1900(){
+			if (arregloDisponibilidad[2][8] === 1){
+				arregloDisponibilidad[2][8] = 0;
+				document.getElementById('Mie1900').innerHTML = "Available";
+				document.getElementById("espacioMie1900").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie1900").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie1900").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][8] = 1;
+				document.getElementById('Mie1900').innerHTML = "Busy";
+				document.getElementById("espacioMie1900").classList.remove('setFondoGris');
+				document.getElementById("espacioMie1900").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue1900(){
+			if (arregloDisponibilidad[3][8] === 1){
+				arregloDisponibilidad[3][8] = 0;
+				document.getElementById('Jue1900').innerHTML = "Available";
+				document.getElementById("espacioJue1900").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue1900").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue1900").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][8] = 1;
+				document.getElementById('Jue1900').innerHTML = "Busy";
+				document.getElementById("espacioJue1900").classList.remove('setFondoGris');
+				document.getElementById("espacioJue1900").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie1900(){
+			if (arregloDisponibilidad[4][8] === 1){
+				arregloDisponibilidad[4][8] = 0;
+				document.getElementById('Vie1900').innerHTML = "Available";
+				document.getElementById("espacioVie1900").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie1900").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie1900").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][8] = 1;
+				document.getElementById('Vie1900').innerHTML = "Busy";
+				document.getElementById("espacioVie1900").classList.remove('setFondoGris');
+				document.getElementById("espacioVie1900").classList.add('setFondoRojo');
+			}
+		}
+
+		//2030-------------------------------------------------------------------------------
+
+
+		function lun2030(){
+			if (arregloDisponibilidad[0][9] === 1){
+				arregloDisponibilidad[0][9] = 0;
+				document.getElementById('lun2030').innerHTML = "Available";
+				document.getElementById("espacioLun2030").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun2030").classList.remove('setFondoGris');
+				document.getElementById("espacioLun2030").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][9] = 1;
+				document.getElementById('lun2030').innerHTML = "Busy";
+				document.getElementById("espacioLun2030").classList.remove('setFondoGris');
+				document.getElementById("espacioLun2030").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar2030(){
+			if (arregloDisponibilidad[1][9] === 1){
+				arregloDisponibilidad[1][9] = 0;
+				document.getElementById('Mar2030').innerHTML = "Available";
+				document.getElementById("espacioMar2030").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar2030").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar2030").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][9] = 1;
+				document.getElementById('Mar2030').innerHTML = "Busy";
+				document.getElementById("espacioMar2030").classList.remove('setFondoGris');
+				document.getElementById("espacioMar2030").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie2030(){
+			if (arregloDisponibilidad[2][9] === 1){
+				arregloDisponibilidad[2][9] = 0;
+				document.getElementById('Mie2030').innerHTML = "Available";
+				document.getElementById("espacioMie2030").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie2030").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie2030").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][9] = 1;
+				document.getElementById('Mie2030').innerHTML = "Busy";
+				document.getElementById("espacioMie2030").classList.remove('setFondoGris');
+				document.getElementById("espacioMie2030").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue2030(){
+			if (arregloDisponibilidad[3][9] === 1){
+				arregloDisponibilidad[3][9] = 0;
+				document.getElementById('Jue2030').innerHTML = "Available";
+				document.getElementById("espacioJue2030").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue2030").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue2030").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][9] = 1;
+				document.getElementById('Jue2030').innerHTML = "Busy";
+				document.getElementById("espacioJue2030").classList.remove('setFondoGris');
+				document.getElementById("espacioJue2030").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie2030(){
+			if (arregloDisponibilidad[4][9] === 1){
+				arregloDisponibilidad[4][9] = 0;
+				document.getElementById('Vie2030').innerHTML = "Available";
+				document.getElementById("espacioVie2030").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie2030").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie2030").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][9] = 1;
+				document.getElementById('Vie2030').innerHTML = "Busy";
+				document.getElementById("espacioVie2030").classList.remove('setFondoGris');
+				document.getElementById("espacioVie2030").classList.add('setFondoRojo');
+			}
+		}
+
+		//1000-------------------------------------------------------------------------------
+
+		function lun2200(){
+			if (arregloDisponibilidad[0][10] === 1){
+				arregloDisponibilidad[0][10] = 0;
+				document.getElementById('lun2200').innerHTML = "Available";
+				document.getElementById("espacioLun2200").classList.remove('setFondoRojo');
+				//document.getElementById("espacioLun2200").classList.remove('setFondoGris');
+				document.getElementById("espacioLun2200").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[0][10] = 1;
+				document.getElementById('lun2200').innerHTML = "Busy";
+				document.getElementById("espacioLun2200").classList.remove('setFondoGris');
+				document.getElementById("espacioLun2200").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mar2200(){
+			if (arregloDisponibilidad[1][10] === 1){
+				arregloDisponibilidad[1][10] = 0;
+				document.getElementById('Mar2200').innerHTML = "Available";
+				document.getElementById("espacioMar2200").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMar2200").classList.remove('setFondoRojo');
+				document.getElementById("espacioMar2200").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[1][10] = 1;
+				document.getElementById('Mar2200').innerHTML = "Busy";
+				document.getElementById("espacioMar2200").classList.remove('setFondoGris');
+				document.getElementById("espacioMar2200").classList.add('setFondoRojo');
+			}
+		}
+
+		function Mie2200(){
+			if (arregloDisponibilidad[2][10] === 1){
+				arregloDisponibilidad[2][10] = 0;
+				document.getElementById('Mie2200').innerHTML = "Available";
+				document.getElementById("espacioMie2200").classList.remove('setFondoRojo');
+				//document.getElementById("espacioMie2200").classList.remove('setFondoRojo');
+				document.getElementById("espacioMie2200").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[2][10] = 1;
+				document.getElementById('Mie2200').innerHTML = "Busy";
+				document.getElementById("espacioMie2200").classList.remove('setFondoGris');
+				document.getElementById("espacioMie2200").classList.add('setFondoRojo');
+			}
+		}
+
+		function Jue2200(){
+			if (arregloDisponibilidad[3][10] === 1){
+				arregloDisponibilidad[3][10] = 0;
+				document.getElementById('Jue2200').innerHTML = "Available";
+				document.getElementById("espacioJue2200").classList.remove('setFondoRojo');
+				//document.getElementById("espacioJue2200").classList.remove('setFondoRojo');
+				document.getElementById("espacioJue2200").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[3][10] = 1;
+				document.getElementById('Jue2200').innerHTML = "Busy";
+				document.getElementById("espacioJue2200").classList.remove('setFondoGris');
+				document.getElementById("espacioJue2200").classList.add('setFondoRojo');
+			}
+		}
+
+		function Vie2200(){
+			if (arregloDisponibilidad[4][10] === 1){
+				arregloDisponibilidad[4][10] = 0;
+				document.getElementById('Vie2200').innerHTML = "Available";
+				document.getElementById("espacioVie2200").classList.remove('setFondoRojo');
+				//document.getElementById("espacioVie2200").classList.remove('setFondoRojo');
+				document.getElementById("espacioVie2200").classList.add('setFondoGris');
+			}
+			else{
+				arregloDisponibilidad[4][10] = 1;
+				document.getElementById('Vie2200').innerHTML = "Busy";
+				document.getElementById("espacioVie2200").classList.remove('setFondoGris');
+				document.getElementById("espacioVie2200").classList.add('setFondoRojo');
+			}
+		}
+
+	</script>
+
+	<script>
+		function load()
+		{
+			setTimeout(function()
+			{
+				var userUID;
+				if(firebase.auth().currentUser == null)
+				{
+					changeWindow("landing.html");
+					return;
+				}
+				else
+				{
+					userUID = firebase.auth().currentUser
+				}
+			},500);
+		}
+		window.onload = load;
+	</script>
+
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script src="Scripts/index.js"></script>
+</html>
