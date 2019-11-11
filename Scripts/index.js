@@ -398,7 +398,7 @@ function loadIndex()
 					{
 						for(var c = 0; c < cantidadAmigos; c++)
 						{
-							if(arreglo3dAmigos[c][a][b] == 1)
+							if(arreglo3dAmigos[c][a][b] === 1)
 							{
 								disponibilidad ++;
 							}	

@@ -28,12 +28,16 @@
 
 	<body class="setLightMode">
 		<div class="topnav">
-			<a class="active" href="landing.html">Home</a>
+			<a class="active" href="index.html">Home</a>
 			<a href="addFriends.html">Add Friends</a>
 			<a href="modifySchedule.html">Modify Schedule</a>
 			<a href="extras.html">About us</a>
-			<a href="landing.html">Log out</a>
-	</div>
+			<button type="button" class="btn btn-secondary" onclick="logout()">Logout</button>
+		</div>
+
+		<br>
+		<br>
+
 		<div>
 			<header>
 			  <h2>Our purpose</h2>
@@ -48,7 +52,7 @@
 		<div >
 				<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/3VRi6gWj98E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 		</div>
-		<article >
+		<article>
 			<h2>About us</h2>
 			<p>We began our journey because we, as students, saw a problem among our own, it was difficult to know when the schedules of our friends or teammates could allow us to get together </p>
 			<p>That is why we decided to create Calendaily, this way we can know the available times all of our friends have, and have meeteing at times when everybody can</p>
@@ -64,25 +68,6 @@
 		</div>
 		<p>Copyright © 2019</p>
 	</body>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 	<script src="Scripts/index.js"></script>
-	<script src='https://momstudio.es/img/img-elmaquetadorweb/cookieconsent.min.js'></script>
-	<script id="rendered-js">
-	      window.addEventListener("load", function(){
-	window.cookieconsent.initialise({
-	  "palette": {
-	    "popup": {
-	      "background": "#000000"
-	    },
-	    "button": {
-	      "background": "#ffffff"
-	    }
-	  },
-	  "content": {
-	    "message": "We use our own and third party cookies to improve our services. If you continue browsing, we will consider that you accept this use as well as the terms of conditions.",
-	    "dismiss": "ACCEPT",
-	    "link": "Read more",
-	    "href": "PrivacyPolicy.html"
-	  }
-	})});
-	    </script>
 </html>

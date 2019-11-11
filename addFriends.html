@@ -5,15 +5,6 @@
 	<title>Manage Friends</title>
 	
 	<link rel="stylesheet" href="Styles/style.css">
-
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150678565-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-150678565-1');
-	</script>
 	
 	<meta charset="utf-8">
 
@@ -26,20 +17,17 @@
 
 </head>
 
-	<body class="setLightMode"> 
-		<div class="container">
-			<br>
-			<br>
-			<div class="row">
-				<div class="col-sm-10 col-xs-10">
-						<a href="index.html"><h3>Calendaily</h3></a>	
-				</div>
-				<div class="col-sm-2 col-xs-2 float-right">
-					<button onclick="logout()" class="btn btn-primary">Logout</button>
-				</div>
-			</div>
-			<br>
-			<br>
+	<body class="setLightMode" onload="showCurrntFriends()"> 
+		<div class="topnav">
+			<a class="active" href="index.html">Home</a>
+			<a href="addFriends.html">Add Friends</a>
+			<a href="modifySchedule.html">Modify Schedule</a>
+			<a href="extras.html">About us</a>
+			<button type="button" class="btn btn-secondary" onclick="logout()">Logout</button>
+		</div>
+
+		<br>
+		<br>
 
 			<div class="row">
 				<div class="col-xs-12 col-sm-12">
@@ -104,32 +92,37 @@
 								</div>
 							</th>
 							<th width="20%">
-								<button onClick="addFriend()" type="button" class="btn btn-primary" style="width: 150px">Add Friend</button>
+								<button onClick="addFriend()" type="button" class="btn btn-primary">Add Friend</button>
 							</th>
 						</tr>
 					</table>
 				</div>
 			</div>
 		</div>
+		<br>
+		<br>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<p class="display-4">To add a friend you must simple enter your friend's email address, and click add friend</p>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+
+		<div class="topnav">
+  		<a href="mailto:carmen.monjaras@udem.edu" target="_top">Contact us</a>
+			<a href="PrivacyPolicy.html">Website Privacy</a>
+			<a href="https://m.facebook.com"><img border="0" alt="Facebook" src="Images/FacebookLogo.png"  width="45" height="45"></a>
+			<a href="https://twitter.com/?lang=es"><img border="0" alt="Twitter" src="Images/TwitterLogo.png"  width="40" height="40"></a>
+			<a href="tel:812-207-49036"><img border="0" alt="Whatsapp" src="Images/WhattLogo.png"  width="45" height="45"></a>
+
+
+		</div>
+		<p>Copyright © 2019</p>
+
 	</body>
-
-	<script type="text/javascript">
-		function addFriend(){
-			var newFriend = document.getElementById("add_friend").value;
-				if(0===1){ //TODO: Usuario no existe
-					window.alert(newFriend + "No es un usuario valido");
-				}
-				else {
-					//Anadir amigo
-					var cantidadAmigos = 10;//Revisar cantidad de amigos existentes
-					for(var i = 1; i < cantidadAmigos + 1; i++){
-						document.getElementById("username" + i).innerHTML = "Username" + i;
-						document.getElementById("boton" + i).innerHTML = '<button type="button" class="btn btn-danger" style="width: 150px">Erase</button>';
-					}
-				}
-		}	
-	</script>
-
 	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 	<script src="Scripts/index.js"></script>
 </html>
